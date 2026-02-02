@@ -1,0 +1,100 @@
+@media (min-width: 361px) and (max-width: 480px) {
+    .container .image {
+        width: 100% !important;
+        height: 40% !important;
+    }
+
+    .container .wrapper{
+        flex-direction: column;
+    }
+
+    .wrapper .timer{
+        width: 100%;
+        height: 80px;
+        margin: 10px;
+        flex-direction: row;
+    }
+
+    .wrapper .timer div:not(last-child){
+        border-bottom: 0px solid #ffffff00;
+    }
+
+    .wrapper .timer div:not(last-child){
+        border-left: 1px solid #ffffff;
+    }
+
+    main .stages{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .stages .stage{
+        width: 90px;
+        height: 90px;
+    }
+
+    .stages .Milestone{
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .Milestone p{
+        font-size: .90em;
+        text-align: center;
+    }
+
+    .Milestone span{
+        color: #8b8b8b;
+        /* width: 200px !important; */
+    }
+
+    .container .contact{
+        flex-direction: column;
+        width: 100%;
+        gap: 2em;
+    }
+
+    .copyright span{
+        display: none;
+    }
+
+    .contact .map{
+        width: 100%;
+        order: -1;
+    }
+
+    .contact .links{
+        order: -2;
+        position: relative;
+    }
+
+    .contact .links a{
+        font-size: .90em;
+    }
+
+    .group .icons{
+        margin: 0 auto !important;
+    }
+
+    a button{
+        position: absolute;
+        top: 0;
+        right: 10px;
+    }
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+    .container .image {
+        width: 80%;
+        height: 200px;
+    }
+
+    .contact .links{
+       display: none;
+    }
+
+    .stages .stage{
+        width: 80px;
+        height: 80px;
+    }
+}
