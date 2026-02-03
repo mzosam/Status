@@ -89,7 +89,7 @@ nav{
     width: 70%;
     height: 300px;
     background-color: gainsboro;
-    border-radius: 20px;
+    border-radius: 15px;
 }
 
 header button{
@@ -298,4 +298,5 @@ a button:active{
     color: rgba(66, 66, 250, 0.925);
 
 }
+
 
