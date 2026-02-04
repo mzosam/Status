@@ -147,5 +147,37 @@
             <small>&copy; Copyright reserved 2026 <span>| Proudly designed by Big five</span></small>
         </div>
     </main>
+    
+    <script>
+    
+    const days = getElementById("days");
+    const hours = getElementById("hours");
+    const minutes = getElementById("minutes");
+    const seconds = getElementById("seconds");
+    
+  // Set your target date here (YYYY-MM-DDTHH:MM:SS)
+  const targetDate = new Date("2026-03-01T00:00:00").getTime();
+
+  const countdown = setInterval(() => {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    if (distance < 0) {
+      clearInterval(countdown);
+      document.getElementById("countdown").innerHTML = "Time's up!";
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    days.innerHTML = days;
+    hours.innerHTML = hours;
+    minutes.innerHTML = minutes;
+    seconds.innerHTML = seconds;
+  }, 1000);
+    </script>
 </body>
 </html>
