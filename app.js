@@ -15,21 +15,21 @@ function checkPin(){
     }
 }
 
-let Days = document.getElementById("days");
-let Hours = document.getElementById("hours");
-let Minutes = document.getElementById("minutes");
-let Seconds = document.getElementById("seconds");
+const Days = document.getElementById("days");
+const Hours = document.getElementById("hours");
+const Minutes = document.getElementById("minutes");
+const Seconds = document.getElementById("seconds");
 
-let tagertDate = new Date("March 1 2026 00:00:00").getTime();
+const tagertDate = new Date("March 1 2026 00:00:00").getTime();
 
 function timer(){
-    let currentDate = new Date().getTime();
-    let distance = tagertDate - currentDate;
+    const currentDate = new Date().getTime();
+    const distance = tagertDate - currentDate;
 
-    let Days = Math.floor(distance / 1000 / 60 / 60 / 24);
-    let Hours = Math.floor(distance / 1000 / 60 / 60) % 24;
-    let Minutes = Math.floor(distance / 1000 / 60) % 60;
-    let Seconds = Math.floor(distance / 1000) % 60;
+    const Days = Math.floor(distance / 1000 / 60 / 60 / 24);
+    const Hours = Math.floor(distance / 1000 / 60 / 60) % 24;
+    const Minutes = Math.floor(distance / 1000 / 60) % 60;
+    const Seconds = Math.floor(distance / 1000) % 60;
 
     Days.innerHTML = days;
     Hours.innerHTML = hours;
