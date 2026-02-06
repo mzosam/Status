@@ -13,26 +13,29 @@ function checkPin(){
     else{
         alert("Page can't be found");
     }
-}
 
-const Days = document.getElementById("days");
-const Hours = document.getElementById("hours");
-const Minutes = document.getElementById("minutes");
-const Seconds = document.getElementById("seconds");
-
-const tagertDate = new Date("March 1 2026 00:00:00").getTime();
-
-function timer(){
-    const currentDate = new Date().getTime();
-    const distance = tagertDate - currentDate;
-
-    const Days = Math.floor(distance / 1000 / 60 / 60 / 24);
-    const Hours = Math.floor(distance / 1000 / 60 / 60) % 24;
-    const Minutes = Math.floor(distance / 1000 / 60) % 60;
-    const Seconds = Math.floor(distance / 1000) % 60;
-
-    Days.innerHTML = days;
-    Hours.innerHTML = hours;
-    Minutes.innerHTML = minutes;
-    Seconds.innerHTML = seconds;
-}
+    const targetDate = new Date("2026-03-01T00:00:00").getTime();
+    const day = document.getElementById("day");
+    const hour = document.getElementById("hour");
+    const minute = document.getElementById("minute");
+    const second = document.getElementById("second");
+    
+    const countdown = setInterval(() => {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+    
+    if (distance < 0) {
+    clearInterval(countdown);
+    return;
+    }
+    
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    day.innerHTML = days;
+    hour.innerHTML = hours;
+    minute.innerHTML = minutes;
+    second.innerHTML = seconds;
+    }, 1000);
