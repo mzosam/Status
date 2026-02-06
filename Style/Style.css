@@ -1,6 +1,11 @@
 @import url(Responsive.css);
 @import url(https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous");
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html{
+    font-family: "Poppins", sans-serif;
+}
 
 header{
     padding: min(.70em,2%);
@@ -73,7 +78,7 @@ nav{
 }
 
 .timer span{
-    font-size: .80em;
+    font-size: .50em;
 }
 
 .timer div:not(:last-child){
@@ -298,5 +303,6 @@ a button:active{
     color: rgba(66, 66, 250, 0.925);
 
 }
+
 
 
